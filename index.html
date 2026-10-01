@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bilal — простой junior разработчик. Bilgich AI с Google AI Studio API, HTML, CSS, JavaScript, React и Python."
+    />
+    <meta property="og:title" content="Bilal — Junior Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Junior разработчик. Главный проект — Bilgich AI на Google AI Studio API."
+    />
+    <meta property="og:type" content="website" />
+    <title>Bilal — Junior Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Перейти к контенту</a>
+
+    <div class="cursor" aria-hidden="true">
+      <div class="cursor__dot"></div>
+      <div class="cursor__ring"></div>
+    </div>
+
+    <header class="site-header" data-header>
+      <nav class="nav" aria-label="Главная навигация">
+        <a class="brand" href="#home" aria-label="На главную">
+          <span class="brand__mark">B</span>
+          <span class="brand__text">Bilal.dev</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="navMenu"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav__links" id="navMenu" data-nav-menu>
+          <a href="#work">Проекты</a>
+          <a href="#stack">Навыки</a>
+          <a href="#process">Подход</a>
+          <a href="#contact">Контакты</a>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="Сменить тему" data-theme-toggle>
+          <span data-theme-label>Тема</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="heroTitle">
+        <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+        <div class="hero__mesh" aria-hidden="true"></div>
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <div class="hero__inner">
+          <div class="hero__content" data-reveal>
+            <p class="eyebrow">
+              <span class="eyebrow__pulse"></span>
+              Junior разработчик
+            </p>
+
+            <h1 id="heroTitle">
+              <span class="hero__name" data-glitch>Bilal</span>
+              <span class="hero__title-line">
+                Простой <em>junior</em>, который учится и делает
+              </span>
+            </h1>
+
+            <p class="hero__lead">
+              Делаю сайты на HTML, CSS, JavaScript и React. Мой главный проект —
+              <strong>Bilgich AI</strong>: ИИ-помощник, который я сам собрал с
+              <strong>Google AI Studio API</strong>. Python знаю на junior-уровне.
+            </p>
+
+            <div class="hero__actions">
+              <a class="button button--primary" href="#work" data-magnetic>Смотреть проекты</a>
+              <a class="button button--ghost" href="#contact" data-magnetic>Связаться</a>
+            </div>
+
+            <p class="hero__typewriter" aria-live="polite">
+              <span class="hero__typewriter-label">Сейчас:</span>
+              <span data-typewriter></span>
+              <span class="hero__typewriter-cursor">|</span>
+            </p>
+          </div>
+
+          <div class="hero__stats" aria-label="Ключевые показатели" data-reveal data-reveal-delay="120">
+            <div class="stat-card">
+              <strong data-counter="1">0</strong>
+              <span>свой AI-проект</span>
+            </div>
+            <div class="stat-card">
+              <strong>Junior</strong>
+              <span>честный уровень</span>
+            </div>
+            <div class="stat-card">
+              <strong>Python</strong>
+              <span>junior-уровень</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__scroll-hint" aria-hidden="true" data-reveal data-reveal-delay="300">
+          <span>Scroll</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+      </section>
+
+      <section class="marquee" aria-label="Технологии">
+        <div class="marquee__track">
+          <div class="marquee__content">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+            <span>Python</span><span>Google AI Studio</span><span>Bilgich AI</span>
+            <span>Roblox Studio</span><span>Luau</span><span>Responsive UI</span><span>Git</span>
+          </div>
+          <div class="marquee__content" aria-hidden="true">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+            <span>Python</span><span>Google AI Studio</span><span>Bilgich AI</span>
+            <span>Roblox Studio</span><span>Luau</span><span>Responsive UI</span><span>Git</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--work" id="work" aria-labelledby="workTitle">
+        <div class="section__inner">
+          <header class="section__heading" data-reveal>
+            <p class="eyebrow">Projects</p>
+            <h2 id="workTitle">Мои проекты</h2>
+            <p>
+              Главный проект — Bilgich AI. Ещё делал игры в Roblox Studio: шутер,
+              кликер, симулятор и обби.
+            </p>
+          </header>
+
+          <div class="filter-bar" role="list" aria-label="Фильтр проектов" data-reveal>
+            <button class="filter-button is-active" type="button" data-filter="all">Все</button>
+            <button class="filter-button" type="button" data-filter="ai">AI</button>
+            <button class="filter-button" type="button" data-filter="frontend">Frontend</button>
+            <button class="filter-button" type="button" data-filter="ui">UI</button>
+          </div>
+
+          <div class="project-grid">
+            <article
+              class="project-card project-card--featured"
+              data-category="frontend ai ui"
+              data-reveal
+              data-tilt
+            >
+              <div class="project-card__badge">
+                <span class="project-card__live"></span>
+                Мой проект
+              </div>
+              <div class="project-card__visual project-card__visual--ai" aria-hidden="true">
+                <div class="ai-visual">
+                  <div class="ai-visual__orb"></div>
+                  <div class="ai-visual__ring ai-visual__ring--1"></div>
+                  <div class="ai-visual__ring ai-visual__ring--2"></div>
+                  <div class="ai-visual__chat"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__topline">
+                  <span>AI Assistant</span>
+                  <span>личный проект</span>
+                </div>
+                <h3>Bilgich AI</h3>
+                <p>
+                  ИИ-помощник, который я сам сделал. Frontend-интерфейс +
+                  Google AI Studio API: запросы, ответы и диалоговый чат.
+                </p>
+                <div class="tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Google AI Studio</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="frontend ui" data-reveal data-reveal-delay="80" data-tilt>
+              <div class="project-card__visual project-card__visual--portfolio" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__topline">
+                  <span>Portfolio</span>
+                  <span>сейчас</span>
+                </div>
+                <h3>Личное портфолио</h3>
+                <p>
+                  Этот сайт — адаптивная верстка, анимации, canvas-фон, фильтры
+                  проектов и тёмная/светлая тема.
+                </p>
+                <div class="tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="frontend ui" data-reveal data-reveal-delay="160" data-tilt>
+              <div class="project-card__visual project-card__visual--practice" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__topline">
+                  <span>Practice</span>
+                  <span>учебный</span>
+                </div>
+                <h3>React-компоненты</h3>
+                <p>
+                  Практика UI: карточки, формы, состояния, списки и обработка
+                  пользовательских событий.
+                </p>
+                <div class="tags">
+                  <span>React</span>
+                  <span>JavaScript</span>
+                  <span>UI</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--stack" id="stack" aria-labelledby="stackTitle">
+        <div class="section__inner">
+          <header class="section__heading" data-reveal>
+            <p class="eyebrow">Stack</p>
+            <h2 id="stackTitle">Мой стек</h2>
+            <p>
+              Я простой junior: уверенно работаю с базовым frontend, развиваюсь в
+              React и Python, и честно говорю о своём уровне.
+            </p>
+          </header>
+
+          <div class="skill-grid">
+            <article class="skill-card" data-reveal>
+              <span class="skill-card__number">01</span>
+              <h3>Frontend</h3>
+              <p>HTML, CSS, JavaScript и React — адаптивные страницы, формы, меню и интерактив.</p>
+              <ul class="skill-bars" aria-label="Уровень навыков">
+                <li>
+                  <span>HTML / CSS</span>
+                  <div class="skill-bar"><div class="skill-bar__fill" data-progress="88"></div></div>
+                </li>
+                <li>
+                  <span>JavaScript</span>
+                  <div class="skill-bar"><div class="skill-bar__fill" data-progress="75"></div></div>
+                </li>
+                <li>
+                  <span>React</span>
+                  <div class="skill-bar"><div class="skill-bar__fill" data-progress="65"></div></div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="skill-card" data-reveal data-reveal-delay="80">
+              <span class="skill-card__number">02</span>
+              <h3>UI и адаптив</h3>
+              <p>Верстка под телефон и ПК, аккуратные отступы, анимации и понятная структура.</p>
+              <ul class="skill-bars">
+                <li>
+                  <span>Responsive</span>
+                  <div class="skill-bar"><div class="skill-bar__fill" data-progress="82"></div></div>
+                </li>
+                <li>
+                  <span>Animations</span>
+                  <div class="skill-bar"><div class="skill-bar__fill" data-progress="70"></div></div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="skill-card" data-reveal data-reveal-delay="160">
+              <span class="skill-card__number">03</span>
+              <h3>Дополнительно</h3>
+              <p>Google AI Studio API в Bilgich AI. Python на junior-уровне — базовый синтаксис и скрипты.</p>
+              <ul class="skill-bars">
+                <li>
+                  <span>Google AI API</span>
+                  <div class="skill-bar"><div class="skill-bar__fill" data-progress="72"></div></div>
+                </li>
+                <li>
+                  <span>Python</span>
+                  <div class="skill-bar"><div class="skill-bar__fill" data-progress="55"></div></div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--process" id="process" aria-labelledby="processTitle">
+        <div class="section__inner process-layout">
+          <header class="section__heading" data-reveal>
+            <p class="eyebrow">Workflow</p>
+            <h2 id="processTitle">Как я работаю</h2>
+            <p>
+              Для небольших сайтов и frontend-задач двигаюсь по понятным шагам — от
+              идеи до готового результата.
+            </p>
+          </header>
+
+          <div class="timeline" aria-label="Этапы работы" data-timeline>
+            <div class="timeline__line" aria-hidden="true"></div>
+
+            <div class="timeline__item" data-reveal>
+              <span class="timeline__dot">01</span>
+              <div>
+                <h3>Разбор задачи</h3>
+                <p>Понимаю цель, нужные блоки и ожидаемый результат.</p>
+              </div>
+            </div>
+            <div class="timeline__item" data-reveal data-reveal-delay="80">
+              <span class="timeline__dot">02</span>
+              <div>
+                <h3>Верстка</h3>
+                <p>Структура, адаптивная сетка, карточки, формы и кнопки.</p>
+              </div>
+            </div>
+            <div class="timeline__item" data-reveal data-reveal-delay="160">
+              <span class="timeline__dot">03</span>
+              <div>
+                <h3>JavaScript / React</h3>
+                <p>Интерактивность, состояние, события и подключение API.</p>
+              </div>
+            </div>
+            <div class="timeline__item" data-reveal data-reveal-delay="240">
+              <span class="timeline__dot">04</span>
+              <div>
+                <h3>Проверка</h3>
+                <p>Мобильная версия, исправление багов и публикация.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contact" aria-labelledby="contactTitle">
+        <div class="section__inner contact-layout">
+          <div class="contact-copy" data-reveal>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contactTitle">Готов к практике и небольшим заказам</h2>
+            <p>
+              Могу помочь с версткой, простым сайтом, лендингом или frontend-частью
+              небольшого проекта. Напиши — обсудим задачу.
+            </p>
+            <button class="copy-email" type="button" data-copy-email="hello@example.com">
+              hello@example.com
+            </button>
+          </div>
+
+          <form class="contact-form" id="contactForm" data-reveal data-reveal-delay="120">
+            <label class="float-label">
+              <input type="text" name="name" placeholder=" " required />
+              <span>Имя</span>
+            </label>
+            <label class="float-label">
+              <input type="email" name="email" placeholder=" " required />
+              <span>Email</span>
+            </label>
+            <label class="float-label">
+              <textarea name="message" rows="4" placeholder=" " required></textarea>
+              <span>Сообщение</span>
+            </label>
+            <button class="button button--primary" type="submit" data-magnetic>
+              Отправить письмо
+            </button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>© <span data-year></span> Bilal. Junior Developer.</p>
+        <div class="social-links" aria-label="Социальные ссылки">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://t.me/kaitoppe" target="_blank" rel="noreferrer">Telegram</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
